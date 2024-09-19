@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Reserva de Viagem</title>
+</head>
+<body>
+
+    <h1>Formulário de Reserva de Viagem</h1>
+
+    <form action="reserva.php" method="post">
+        <!-- Campo de Nome -->
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+
+        <!-- Campo de Serviços Desejados -->
+        <fieldset>
+            <legend>Serviços Desejados</legend>
+            <label><input type="checkbox" name="servicos[]" value="passagens"> Compra de Passagens</label><br>
+            <label><input type="checkbox" name="servicos[]" value="hospedagem"> Reserva de Hospedagem</label><br>
+            <label><input type="checkbox" name="servicos[]" value="veiculos"> Aluguel de Veículos</label>
+        </fieldset>
+
+        <!-- Campo de Forma de Pagamento -->
+        <fieldset>
+            <legend>Forma de Pagamento</legend>
+            <label><input type="radio" name="pagamento" value="cartao" required> Cartão de Crédito</label><br>
+            <label><input type="radio" name="pagamento" value="boleto"> Boleto</label><br>
+            <label><input type="radio" name="pagamento" value="pix"> PIX</label>
+        </fieldset>
+
+        <!-- Campo de Prazo de Pagamento -->
+        <fieldset>
+            <legend>Prazo de Pagamento</legend>
+            <label for="prazo">Escolha o prazo:</label>
+            <select id="prazo" name="prazo" required>
+                <option value="avista">À Vista</option>
+                <option value="cinco_sem_juros">Cinco Vezes Sem Juros</option>
+                <option value="dez_com_juros">Dez Vezes Com Juros</option>
+            </select>
+        </fieldset>
+
+        <!-- Botão de Envio -->
+        <br>
+        <input type="submit" value="Enviar Reserva">
+    </form>
+
+</body>
+</html>

@@ -1,89 +1,54 @@
-let bebida = 'leite';
-let valor;
-
-switch (bebida) {
-    case 'café':
-        valor = "3,50";
-        break;
-    case 'leite':
-        valor = "2,50";
-        break;
-    case 'chá':
-        valor = "2,00";
-        break;
-    default:
-        console.log("Opção inválida! Por favor, escolha entre café, leite ou chá.");
-        break;
-}
-
-if (valor !== undefined) {
-    console.log("Você escolheu "+bebida+". O valor a ser pago é R$ "+valor+".");
-}
-
-var carro = [{modelo: 'audi A3', marca: 'audi', ano: 2013},
-{modelo: 'compas', marca: 'jeep', ano: 2014}];
-
-for (let index in carro) {
-    console.log(carro[index]);
-    
-}
-
-for (let c of carro) {
-    console.log(c.ano);
-    
-}
-
-var c =1;
-while (c<= 10) {
-    console.log(c); 
-    c++;   
-}
-var t =1;
-do {
-    console.log(t);
-    t++
-} while (t<2);
-
-
-const ccarro = {
-
-    modelo: 'Audi A3',
-  
-    marca: 'Audi',
-  
-    ano: 2020
-  
-  };
-  
-  for (let caracteristica in ccarro) {
-  
-    console.log(caracteristica + ': ' + ccarro[caracteristica]);
-  
-  }
-  console.log('-----1');
-  console.log('-----2');
-  console.log('-----3');
-
-  const ca = [
-
-    { modelo: 'Audi A3', marca: 'Audi', ano: 2020 },
-  
-    { modelo: 'Jeep Compact', marca: 'Jeep', ano: 2021 }
-  
-  ];
-  
-  for (let indice in ca) {
-  
-    console.log('Carro ' + (parseInt(indice) + 1) + ':');
-  
-    for (let atributo in ca[indice]) {
-  
-      console.log(atributo + ': ' + ca[indice][atributo]);
-  
+// Classe Funcionario
+class Funcionario {
+    constructor(nome, idade, cargo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cargo = cargo;
     }
-  
-    console.log('-----');
-  
-  }
 
+    seApresentar() {
+        console.log(`Olá, meu nome é ${this.nome}, tenho ${this.idade} anos e sou ${this.cargo}.`);
+    }
 
+    trabalhar() {
+        console.log(`${this.nome} está trabalhando como ${this.cargo}.`);
+    }
+}
+
+// Classe Gerente que herda de Funcionario
+class Gerente extends Funcionario {
+    constructor(nome, idade, cargo, departamento) {
+        super(nome, idade, cargo);
+        this.departamento = departamento;
+    }
+
+    gerenciar() {
+        console.log(`${this.nome} está gerenciando o departamento de ${this.departamento}.`);
+    }
+}
+
+// Classe Desenvolvedor que herda de Funcionario
+class Desenvolvedor extends Funcionario {
+    constructor(nome, idade, cargo, linguagem) {
+        super(nome, idade, cargo);
+        this.linguagem = linguagem;
+    }
+
+    programar() {
+        console.log(`${this.nome} está programando em ${this.linguagem}.`);
+    }
+}
+
+// Criando instâncias de Gerente e Desenvolvedor
+const gerente = new Gerente("Ana", 40, "Gerente", "Recursos Humanos");
+const desenvolvedor = new Desenvolvedor("Carlos", 30, "Desenvolvedor", "JavaScript");
+
+// Chamando os métodos para o Gerente
+gerente.seApresentar();  // Olá, meu nome é Ana, tenho 40 anos e sou Gerente.
+gerente.trabalhar();      // Ana está trabalhando como Gerente.
+gerente.gerenciar();      // Ana está gerenciando o departamento de Recursos Humanos.
+
+// Chamando os métodos para o Desenvolvedor
+desenvolvedor.seApresentar();  // Olá, meu nome é Carlos, tenho 30 anos e sou Desenvolvedor.
+desenvolvedor.trabalhar();     // Carlos está trabalhando como Desenvolvedor.
+desenvolvedor.programar();     // Carlos está programando em JavaScript.

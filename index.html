@@ -1,57 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Reserva de Viagem</title>
+    <title>Minha Página Web</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <h1>Formulário de Reserva de Viagem</h1>
+    <!-- Cabeçalho -->
+    <header class="bg-primary text-white p-3">
+        <div class="container">
+            <h1>Minha Página Web</h1>
+            <!-- Menu de Navegação -->
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <form action="reserva.php" method="post">
-        <!-- Campo de Nome -->
-        <fieldset>
-            <legend>Informações Pessoais</legend>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <br><br>
+    <!-- Corpo da Página -->
+    <main>
+        <div class="container mt-5">
+            <!-- Seção 1 -->
+            <section>
+                <h2>Seção 1</h2>
+                <p>Esta é a primeira seção do corpo da página. Ela contém texto explicativo e outros detalhes.</p>
+            </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </fieldset>
+            <!-- Seção 2 -->
+            <section>
+                <h2>Seção 2</h2>
+                <p>Esta é a segunda seção, onde você pode adicionar mais conteúdo interessante.</p>
+            </section>
 
-        <!-- Campo de Serviços Desejados -->
-        <fieldset>
-            <legend>Serviços Desejados</legend>
-            <label><input type="checkbox" name="servicos[]" value="passagens"> Compra de Passagens</label><br>
-            <label><input type="checkbox" name="servicos[]" value="hospedagem"> Reserva de Hospedagem</label><br>
-            <label><input type="checkbox" name="servicos[]" value="veiculos"> Aluguel de Veículos</label>
-        </fieldset>
+            <!-- Seção 3 -->
+            <section>
+                <h2>Seção 3</h2>
+                <p>Aqui está a terceira e última seção. Adicione qualquer outro conteúdo importante.</p>
+            </section>
+        </div>
+    </main>
 
-        <!-- Campo de Forma de Pagamento -->
-        <fieldset>
-            <legend>Forma de Pagamento</legend>
-            <label><input type="radio" name="pagamento" value="cartao" required> Cartão de Crédito</label><br>
-            <label><input type="radio" name="pagamento" value="boleto"> Boleto</label><br>
-            <label><input type="radio" name="pagamento" value="pix"> PIX</label>
-        </fieldset>
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <div class="container">
+            <p>&copy; 2024 - Todos os direitos reservados</p>
+        </div>
+    </footer>
 
-        <!-- Campo de Prazo de Pagamento -->
-        <fieldset>
-            <legend>Prazo de Pagamento</legend>
-            <label for="prazo">Escolha o prazo:</label>
-            <select id="prazo" name="prazo" required>
-                <option value="avista">À Vista</option>
-                <option value="cinco_sem_juros">Cinco Vezes Sem Juros</option>
-                <option value="dez_com_juros">Dez Vezes Com Juros</option>
-            </select>
-        </fieldset>
-
-        <!-- Botão de Envio -->
-        <br>
-        <input type="submit" value="Enviar Reserva">
-    </form>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding : 0;
-    background: #ccc url(images/bg.jpg) center repeat;
+    background: #ccc url(https://app.box.com/s/ah7olp7dcy75j4ew1icvnyskvfpy0i2c/img/bg.jpg) center repeat;
     color: #555;
     }
                 /*WRAP*/
@@ -21,7 +21,7 @@ body {
     margin-bottom: 0;
     height: 150px;
     border-bottom:3px solid #fff;
-    background: #82B64D url(images/wine.jpg);
+    background: #82B64D url(https://app.box.com/s/ah7olp7dcy75j4ew1icvnyskvfpy0i2c/img/wine.jpg);
     color: #000;
     }
                 /*TOP NAVIGATION*/
@@ -171,17 +171,17 @@ body {
     font-size: 80%;
     }
     .post .date {
-    background: url(images/clock.gif) no-repeat left center;
+    background: url(https://app.box.com/s/ah7olp7dcy75j4ew1icvnyskvfpy0i2c/img/clock.gif) no-repeat left center;
     padding-left: 15px;
     margin: 0 15px 0 5px;
     }
     .post .comments {
-    background: url(images/comment.gif) no-repeat left center;
+    background: url(https://app.box.com/s/ah7olp7dcy75j4ew1icvnyskvfpy0i2c/img/comment.gif) no-repeat left center;
     padding-left: 15px;
     margin: 0 15px 0 5px;
     }
     .post .readmore {
-    background: url(images/document.gif) no-repeat left center;
+    background: url(https://app.box.com/s/ah7olp7dcy75j4ew1icvnyskvfpy0i2c/img/document.gif) no-repeat left center;
     padding-left: 15px;
     margin: 0 15px 0 5px;
     }
